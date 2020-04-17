@@ -6,7 +6,7 @@
 @if(Auth::check() )
 <ul id="myUL">
 @foreach($tasks as $task)
-    @if(Gate::denies('update-post', $task))
+    @if(Gate::denies('task-checking', $task))
     @else
        <li>
             <div class="task">
